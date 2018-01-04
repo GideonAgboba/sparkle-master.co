@@ -20,12 +20,12 @@
 </head>
 <body>
     <!-- our navbar -->
-     <nav class="navbar-extended green-body fixed-top">
+     <nav class="navbar-extended green-body fixed-top" style="overflow:hidden;">
     <div class="nav-content home-navbar-sec2">
       <ul class="tabs tabs-transparent">
         <li class="tab">
           
-      <h4 class="ml-3 navbar-brand home-navbar-logo white-text" href="#">Sparkle</h4>
+      <h4 class="ml-3 navbar-brand home-navbar-logo white-text" href="#">Sparkle <i class="fa fa-paint-brush"></i></h4>
         </li>
         <li class="tab">
           <a href="#test1" class="nav-link active white-text"><i class="fa fa-home"></i> Home</a>
@@ -183,7 +183,7 @@
                   <div class="card-content">
                     <span class="card-title activator grey-text text-darken-4">Click Order to make purchase: <i class="material-icons right">more_vert</i></span>
                     <p class="green-font text-center">This section is for users who want to make payments on delivery...</p>
-                    <a href="#" class="mt-2 container-fluid btn green-body white-text"  data-toggle="modal" data-target="#details-6">Order</a>
+                    <a href="quick-order.html" class="mt-2 container-fluid btn green-body white-text"  data-toggle="modal" data-target="#details-6" onclick="">Order</a>
                   </div>
                   <div class="card-reveal">
                     <span class="card-title grey-text text-darken-4">Quick purchase:<i class="material-icons right">close</i></span>
@@ -202,6 +202,179 @@
             </div>
         </div>
       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="modal fade details-6" id="details-6" tabindex="-1" role="dialog" aria-labelledby="details-6" aria-hidden="false">
+
+	<div class="modal-dialog modal-content">
+		<div class="container-fluid">
+			<div class="modal-header">
+				<button class="close" type="button" data-dismiss="modal" aria-label="close">
+				<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title text-center">Make purchase:</h4>
+			</div>
+			<div class="container modal-body">
+				<section class="reg-legend mt-4">
+      			<div class="row">
+
+      			 <form class="col-lg-12" id="contact-form" method="POST" action=""> 
+
+
+		            <div class="row"> 
+		               <div class="input-field col-lg-6">  
+		                  <input placeholder="Full name" id="firstname" name="fullname" type="text" class="text-center active validate  green-font" required> 
+		                  <label for="name">First  name</label> 
+		               </div> 
+		               <div class="input-field col-lg-6">      
+		                  <label for="lastname">Last name</label> 
+		                  <input id="lastname" type="text" placeholder="Lastname" name="lastname" class="text-center validate  green-font" required>           
+		               </div> 
+		            </div> 
+		            <div class="row"> 
+		               <div class="input-field col-lg-6"> 
+		                  <input placeholder="Email" id="email" name="email" type="email" class="validate  green-fonte text-center" required> 
+		                  <label for="email">Email</label> 
+		               </div>  
+		               <div class="input-field col-lg-6">
+		                  <input placeholder="Telephone no" id="number" name="number" type="number" class="validate text-center  green-font" required> 
+		                  <label for="number">Telephone no</label> 
+		               </div> 
+		            </div> 
+		            <div class="row green-body" style="border-radius: 5px;padding: 5px;">
+		            		<h5 class="text-center text-white">Single purchase:</h5>
+		            		<hr class="container">	 
+		               <div class="input-field col-lg-6"> 
+		                  <input placeholder="Quantity" id="quantity" type="number" name="quantity" class="validate  text-muted text-center"> 
+		                  <label for="quantity " class="text-white">Quantity:</label> 
+		               </div>  
+		               <div class="input-field col-lg-6">
+		                  <input placeholder="Item" id="item" type="text" class="validate text-center text-muted" name="item"> 
+		                  <label for="item" class="text-white">Item:</label> 
+		               </div> 
+		            </div> 
+		            <div class="row green-body mt-2 mb-2" style="border-radius: 5px;padding: 5px;">
+		            		<h5 class="text-center text-white">Multi purchase:</h5>
+		            		<hr class="container">	
+		               <div class="input-field col-lg-12"> 
+		                  <input placeholder="itmes" id="items" name="items" type="text" class="validate text-white text-center"> 
+		                  <label for="items" class="text-white">Items:</label> 
+		               </div>
+		           </div>
+		            <div class="row"> 
+		               <div class="input-field col-lg-12"> 
+		                  <input placeholder="Address" id="address" name="address" type="text" class="validate  green-font text-center" required> 
+		                  <label for="address">Address:</label> 
+		               </div>
+		           </div>
+		            <div class="row"> 
+		               <div class="input-field col-lg-12"> 
+		                  <input placeholder="bio" id="bio" name="bio" type="text" class="validate green-font text-center" required> 
+		                  <label for="bio">Bio</label> 
+		               </div>
+		           </div>
+
+					<div class="container modal-footer">
+						<button class="btn btn-danger mr-3" data-dismiss="modal">Cancle</button>	
+						<button type="submit" name="send" class="btn green-body text-white">Checkout<span class="fa fa-shopping-cart"></span></button>
+					</div>
+		         </form>        
+		      </div>
+      		</section>
+		</div>
+		</div>
+
+		</div>
+	</div>
+
+
+<script>
+	$("#contact-form").submit(function(e)){
+		var firstname = document.getElementById("firstname"),
+		var lastname = document.getElementById("lastname"),
+		var email = document.getElementById("email"),
+		var number = document.getElementById("number"),
+		var quantity = document.getElementById("quantity"),
+		var item = document.getElementById("item"),
+		var items = document.getElementById("items"),
+		var address = document.getElementById("address"),
+		var bio = document.getElementById("bio");
+
+		if(!firstname.value || !lastname.value || !email.value || !number.value || !quantity.value || !item.value || !items.value || !address.value || !bio.value ){
+			alertify.error("Please check your entries "); 
+		}else{
+			$.ajax({
+				url: "https://formspree.io/agbobakehinde@gmail.com",
+				method: "POST",
+				data: $(this).serialize(),
+				dataType: "json"
+			});
+			e.preventDefault()
+			$(this).get(0).reset() 
+			alertify.success("Order placed successfully")
+		}
+	}
+</script>
+
+
+
+
+
 
 
           <div class="container home-contact-section text-center">
@@ -236,7 +409,7 @@
             <div class="row">
                 <div class="col s4">
                     <div class="circle home-about-img">
-                        <img src="imgs/ss.jpg" class="rounded-circle">
+                        <img src="imgs/wrap.jpg" class="rounded-circle">
                     </div>
                 </div>
                 <div class="col s8 text-center white-text ">
@@ -251,13 +424,20 @@
       </div>
 
 
-        <div class="container white" style="width: 100%; height: 300px;">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        <div class="container-fluid white" style="width:100%; position:relative; height:450px;">
+          <!-- <div class="row">
+            <div class="pl-2 col-lg-12 justify-content-center my-auto flex-wrap background mt-4">
+              <hr class="container">
+              <div class="content">
+              <div class="block x1"><img src="imgs/gallery1.jpg" alt="gallery"></div>
+              <div class="block x2"><img src="imgs/gallery4.jpg" alt="gallery"></div>
+              <div class="block x3"><img src="imgs/gallery2.jpg" alt="gallery"></div>
+              <div class="block x4"><img src="imgs/gallery.jpg" alt="gallery"></div>
+              <div class="block x5"><img src="imgs/gallery3.jpg" alt="gallery"></div>
+            </div>
+            </div>
+          </div> -->
+          
         </div>
 
 
@@ -347,10 +527,11 @@
           </div>
           </div>
               
+          <hr class="container">
           <div class="row container-fluid">
             
           <div class="col-lg-6 mt-5">
-            <i class="lab-qoutes"><q class="text-center">We offer finely mixed emulsion paints, with smooth texture and fine smell. Hover on the image to check our price and check our store to purchase.</q></i>
+            <i class="lab-qoutes"><q class="text-center">We offer finely mixed Texcot paints, with smooth texture and fine smell. Hover on the image to check our price and check our store to purchase.</q></i>
           </div>
 
           
@@ -364,212 +545,42 @@
                     <div class="back">
                         <div class="inner">
                           <h2 class="text-white">White and colored</h2>
-                          <i>Price: <s class="text-danger">N5,200</s></i>
-                          <p>Our price: N4,500</p>
+                          <i>Price: <s class="text-danger">N7,200</s></i>
+                          <p>Our price: N6,000</p>
                         </div>
                     </div>
                 </div>
             </div>
           </div>
+                
+          <hr class="container">
+          <hr class="container">
+          <div class="row container-fluid">
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front" style="background-image: url(imgs/fh.jpg)">
+                        <div class="inner">
+                            <p>Gloss</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                          <h2 class="text-white">White and colored</h2>
+                          <i>Price: <s class="text-danger">N4,999</s></i>
+                          <p>Our price: N4,500</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              
+          <div class="col-lg-6 mt-5">
+            <i class="lab-qoutes"><q class="text-center">We offer finely mixed emulsion paints, with smooth texture and fine smell. Hover on the image to check our price and check our store to purchase.</q></i>
+          </div>
+          </div>
 
-          
-
- <style>
-    *{
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-        .lab-qoutes{
-          font-size: 20px;
-        }
-
-h1{
-  font-size: 2.5rem;
-  font-family: 'Montserrat';
-  font-weight: normal;
-  color: #444;
-  text-align: center;
-  margin: 2rem 0;
-}
-
-.wrapper{
-  width: 90%;
-  margin: 0 auto;
-  max-width: 80rem;
-}
-
-.cols{
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.col{
-  width: 500px;
-  height: 500px;
-  margin: 1rem;
-  cursor: pointer;
-}
-
-.container{
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-    -webkit-perspective: 1000px;
-            perspective: 1000px;
-}
-
-.front,
-.back{
-  background-size: cover;
-    background-position: center;
-    -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-    transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-    -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-    text-align: center;
-    min-height: 280px;
-    height: auto;
-    border-radius: 10px;
-    color: #fff;
-    font-size: 1.5rem;
-}
-
-.back{
-  background: #cedce7;
-  background: -webkit-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
-  background: -o-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
-  background: linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
-}
-
-.front:after{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    content: '';
-    display: block;
-    opacity: .6;
-    background-color: #000;
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-    border-radius: 10px;
-}
-.container:hover .front,
-.container:hover .back{
-    -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-    transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-    -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-}
-
-.back{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-.inner{
-    -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
-            transform: translateY(-50%) translateZ(60px) scale(0.94);
-    top: 50%;
-    position: absolute;
-    left: 0;
-    width: 100%;
-    padding: 2rem;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    outline: 1px solid transparent;
-    -webkit-perspective: inherit;
-            perspective: inherit;
-    z-index: 2;
-}
-
-.container .back{
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-}
-
-.container .front{
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-}
-
-.container:hover .back{
-  -webkit-transform: rotateY(0deg);
-          transform: rotateY(0deg);
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-}
-
-.container:hover .front{
-  -webkit-transform: rotateY(-180deg);
-          transform: rotateY(-180deg);
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-}
-
-.front .inner p{
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  position: relative;
-}
-
-.front .inner p:after{
-  content: '';
-  width: 4rem;
-  height: 2px;
-  position: absolute;
-  background: #C6D4DF;
-  display: block;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  bottom: -.75rem;
-}
-
-.front .inner span{
-  color: rgba(255,255,255,0.7);
-  font-family: 'Montserrat';
-  font-weight: 300;
-}
-
-@media screen and (max-width: 64rem){
-  .col{
-    width: calc(33.333333% - 2rem);
-  }
-}
-
-@media screen and (max-width: 48rem){
-  .col{
-    width: calc(50% - 2rem);
-  }
-}
-
-@media screen and (max-width: 32rem){
-  .col{
-    width: 100%;
-    margin: 0 0 2rem 0;
-  }
-}
-</style>
+          <hr class="container">
+          <h1 class="text-white container">Interior</h1>  
+          <hr class="container">   
 
   </div>
 
@@ -617,21 +628,38 @@ h1{
 
 
   <div id="test3" class="green-body container-fluid ">
-    <div>
-        
-    </div>
-    <div class="">
-      
-    <div class="row container-fluid">
-        <h4 class="text-center text-white">Store</h4>
-        <hr class="container">
-      <div class="productosWrapper">
-        
-      </div>
+    
+    <nav class="navbar navbar-extended nav-content white mt-5 fixed-top">
+      <ul class="tabs tabs-transparent justify-content-center my-auto d-flex">
+        <li class="tab">
+          <a class="nav-link green-font" href="#emulsion">Emulsion <i class="fa fa-tint"></i></a>
+        </li>
+        <li class="tab">
+          <a href="#texcote" class="nav-link green-font">Texcote <i class="fa fa-soundcloud"></i></a>
+        </li>
+        <li class="tab"><a href="#gloss" class="nav-link green-font">Gloss <i class="fa fa-yelp"></i></a></li>
+      </ul>
+    </nav>
+    <div id="emulsion" class="green-body container-fluid">
+      <div class="">  
+        <div class="row container-fluid">
+            <h4 class="text-center text-white">Store</h4>
+            <hr class="container">
+          <div class="productosWrapper">
+            
+          </div>
 
+        </div>
+      </div>
     </div>
+    <div id="texcote" class="green-body container-fluid">
+     
+    </div>
+    <div id="gloss" class="green-body container-fluid">
+      
     </div>
   </div>
+
 
 
 
@@ -702,8 +730,8 @@ h1{
 <div class="tile"> 
   <img src='imgs/int2.jpg'/>
   <div class="text">
-  <h2 class="animate-text">Interior design <i class="fa fa-home"></i></h2>
-  <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p>
+  <h2 class="animate-text">Interior design <i class="fa fa-paint-brush"></i></h2>
+  <p class="animate-text">With fine quality paints as our edge in this line of business. We provide finishings looking very unique and out standing.</p>
 <div class="dots">
     <span></span>
     <span></span>
@@ -780,11 +808,8 @@ h1{
 
 
 
-
-<div w3-include-html="quick-order.html"></div>
-
+</script>
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js?ver=1.11.2'></script>
-<script src="https://www.w3schools.com/lib/w3.js"></script>
     <script src="jquery/jquery.min.js"></script>
     <script src="popper/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
