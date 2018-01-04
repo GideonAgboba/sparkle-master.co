@@ -25,7 +25,7 @@
       <ul class="tabs tabs-transparent">
         <li class="tab">
           
-      <h4 class="ml-3 navbar-brand home-navbar-logo white-text" href="#">Sparkle <i class="fa fa-paint-brush"></i></h4>
+      <h4 class="ml-3 navbar-brand home-navbar-logo white-text" href="#">Sparkle <i class="fa fa-yelp"></i></h4>
         </li>
         <li class="tab">
           <a href="#test1" class="nav-link active white-text"><i class="fa fa-home"></i> Home</a>
@@ -87,58 +87,6 @@
 
 
   <div id="test1" class="">
-    <style type="text/css">
-      .cont1{
-        background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) ), url(imgs/bg2.jpg);
-        background-size: cover;
-        position: relative;
-        background-attachment: fixed;
-        width: 100% !important;
-        padding-top: 5em;
-        padding-bottom: 3em;
-
-      }
-      .cont1 img{
-      }
-      .cont1-2{
-        /* width: 1000px; */
-      }
-      /* Carousel base class */
-.carousel {
-  margin-bottom: 4rem;
-  height: 75%;
-  color: #fff;
-}
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  z-index: 1000 !important;
-  bottom: 3rem;
-}
-.carousel-quote{
-  font-size: 30px;
-  text-align: center;
-  color: #fff;
-  z-index: 2000;
-}
-
-/* Declare heights because of positioning of img element */
-.carousel-item {
-  height: 100% !important;
-  z-index: 1000 !important;
-  background-color: #fff;
-}
-.carousel-item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100% !important;
-}
-.carousel-control{
-  position: absolute !important;
-  bottom: 0px !important;
-}
-    </style>
       <div class="container-fluid green-body cont1">
           <div class="">
             <div class="row col-lg-12 cont1-2">
@@ -343,38 +291,60 @@
 	</div>
 
 
-<script>
-	$("#contact-form").submit(function(e)){
-		var firstname = document.getElementById("firstname"),
-		var lastname = document.getElementById("lastname"),
-		var email = document.getElementById("email"),
-		var number = document.getElementById("number"),
-		var quantity = document.getElementById("quantity"),
-		var item = document.getElementById("item"),
-		var items = document.getElementById("items"),
-		var address = document.getElementById("address"),
-		var bio = document.getElementById("bio");
 
-		if(!firstname.value || !lastname.value || !email.value || !number.value || !quantity.value || !item.value || !items.value || !address.value || !bio.value ){
-			alertify.error("Please check your entries "); 
-		}else{
-			$.ajax({
-				url: "https://formspree.io/agbobakehinde@gmail.com",
-				method: "POST",
-				data: $(this).serialize(),
-				dataType: "json"
-			});
-			e.preventDefault()
-			$(this).get(0).reset() 
-			alertify.success("Order placed successfully")
-		}
-	}
-</script>
+        <div class="container-fluid gallery-section">
+          <div class="row mt-3">
+            <div class="col-lg-4">
+              <div class="rounded-circle gallery-section-img mb-3"><img src="imgs/bg2.jpg" class="rounded-circle"></div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="col-lg-4">
+              <div class="rounded-circle gallery-section-img mb-3"><img src="imgs/bg2.jpg" class="rounded-circle"></div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="col-lg-4">
+              <div class="rounded-circle gallery-section-img mb-3"><img src="imgs/bg2.jpg" class="rounded-circle"></div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
 
+          
+        </div>
+         
 
-
-
-
+      <div class="home-about-section green-body">
+        <div class="home-about-section-container">
+            <div class="row">
+                <div class="col s4">
+                    <div class="circle home-about-img">
+                        <img src="imgs/wrap.jpg" class="rounded-circle">
+                    </div>
+                </div>
+                <div class="col s8 text-center white-text ">
+                    <q>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, laborum.
+                    </q><br><br>
+                        <a href="#" class="btn white green-font ">Contact Us</a>
+                </div>
+            </div>
+        </div>
+      </div>
 
 
           <div class="container home-contact-section text-center">
@@ -403,42 +373,6 @@
       </div>
       </div>
 
-
-      <div class="home-about-section green-body">
-        <div class="home-about-section-container">
-            <div class="row">
-                <div class="col s4">
-                    <div class="circle home-about-img">
-                        <img src="imgs/wrap.jpg" class="rounded-circle">
-                    </div>
-                </div>
-                <div class="col s8 text-center white-text ">
-                    <q>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, laborum.
-                    </q><br><br>
-                        <a href="#" class="btn white green-font ">Contact Us</a>
-                </div>
-            </div>
-        </div>
-      </div>
-
-
-        <div class="container-fluid white" style="width:100%; position:relative; height:450px;">
-          <!-- <div class="row">
-            <div class="pl-2 col-lg-12 justify-content-center my-auto flex-wrap background mt-4">
-              <hr class="container">
-              <div class="content">
-              <div class="block x1"><img src="imgs/gallery1.jpg" alt="gallery"></div>
-              <div class="block x2"><img src="imgs/gallery4.jpg" alt="gallery"></div>
-              <div class="block x3"><img src="imgs/gallery2.jpg" alt="gallery"></div>
-              <div class="block x4"><img src="imgs/gallery.jpg" alt="gallery"></div>
-              <div class="block x5"><img src="imgs/gallery3.jpg" alt="gallery"></div>
-            </div>
-            </div>
-          </div> -->
-          
-        </div>
 
 
 
@@ -629,15 +563,15 @@
 
   <div id="test3" class="green-body container-fluid ">
     
-    <nav class="navbar navbar-extended nav-content white mt-5 fixed-top">
+    <nav class="navbar navbar-extended nav-content white mt-5 fixed-top" style="z-index: 10;">
       <ul class="tabs tabs-transparent justify-content-center my-auto d-flex">
         <li class="tab">
-          <a class="nav-link green-font" href="#emulsion">Emulsion <i class="fa fa-tint"></i></a>
+          <a class="nav-link green-font store-nav-item active" href="#emulsion">Emulsion <i class="fa fa-tint"></i></a>
         </li>
         <li class="tab">
-          <a href="#texcote" class="nav-link green-font">Texcote <i class="fa fa-soundcloud"></i></a>
+          <a href="#texcote" class="nav-link green-font store-nav-item">Texcote <i class="fa fa-soundcloud"></i></a>
         </li>
-        <li class="tab"><a href="#gloss" class="nav-link green-font">Gloss <i class="fa fa-yelp"></i></a></li>
+        <li class="tab"><a href="#gloss" class="nav-link green-font store-nav-item">Gloss <i class="fa fa-yelp"></i></a></li>
       </ul>
     </nav>
     <div id="emulsion" class="green-body container-fluid">
@@ -653,7 +587,14 @@
       </div>
     </div>
     <div id="texcote" class="green-body container-fluid">
-     
+        <div class="row container-fluid">
+            <h4 class="text-center text-white">Store</h4>
+            <hr class="container">
+          <div class="productosWrapperTexcote">
+            
+          </div>
+
+        </div>
     </div>
     <div id="gloss" class="green-body container-fluid">
       
@@ -716,8 +657,8 @@
 <div class="tile"> 
   <img src='imgs/int1.jpg'/>
   <div class="text">
-  <h2 class="animate-text">More lorem ipsum bacon ipsum.</h2>
-  <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p>
+  <h2 class="animate-text">Interior design <i class="fa fa-paint-brush"></i></h2>
+  <p class="animate-text">With fine quality paints as our edge in this line of business. We provide finishings looking very unique and out standing.</p>
 <div class="dots">
     <span></span>
     <span></span>
@@ -743,8 +684,8 @@
   <div class="tile"> 
   <img src='imgs/int3.jpg'/>
   <div class="text">
-  <h2 class="animate-text">More lorem ipsum bacon ipsum.</h2>
-  <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p>
+  <h2 class="animate-text">Interior design <i class="fa fa-paint-brush"></i></h2>
+  <p class="animate-text">With fine quality paints as our edge in this line of business. We provide finishings looking very unique and out standing.</p>
 <div class="dots">
     <span></span>
     <span></span>
@@ -758,8 +699,8 @@
 <div class="tile"> 
   <img src='imgs/int1.jpg'/>
   <div class="text">
-  <h2 class="animate-text">More lorem ipsum bacon ipsum.</h2>
-  <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p>
+  <h2 class="animate-text">Interior design <i class="fa fa-paint-brush"></i></h2>
+  <p class="animate-text">With fine quality paints as our edge in this line of business. We provide finishings looking very unique and out standing.</p>
 <div class="dots">
     <span></span>
     <span></span>
@@ -772,8 +713,8 @@
 <div class="tile"> 
   <img src='imgs/int2.jpg'/>
   <div class="text">
-  <h2 class="animate-text">More lorem ipsum bacon ipsum.</h2>
-  <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p>
+  <h2 class="animate-text">Interior design <i class="fa fa-paint-brush"></i></h2>
+  <p class="animate-text">With fine quality paints as our edge in this line of business. We provide finishings looking very unique and out standing.</p>
 <div class="dots">
     <span></span>
     <span></span>
@@ -785,8 +726,8 @@
   <div class="tile"> 
   <img src='imgs/int3.jpg'/>
   <div class="text">
-  <h2 class="animate-text">More lorem ipsum bacon ipsum.</h2>
-  <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p>
+  <h2 class="animate-text">Interior design <i class="fa fa-paint-brush"></i></h2>
+  <p class="animate-text">With fine quality paints as our edge in this line of business. We provide finishings looking very unique and out standing.</p>
 <div class="dots">
     <span></span>
     <span></span>
@@ -819,6 +760,5 @@
 <script  src="js/index.js"></script>
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
-      <script src="js/init.js"></script>
 </body>
 </html>

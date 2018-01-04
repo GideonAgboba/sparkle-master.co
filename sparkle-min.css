@@ -3,7 +3,9 @@ body{
 	zoom: 80% !important;
 }
 
-
+.store-nav-item:focus{
+  border-bottom: 10px solid #25A187 !important;
+ }
 	/*.alert-true{
 		background-color: #28a745 !important;
 		color: #fff !important;
@@ -140,7 +142,7 @@ body{
 	padding: 10px !important;
 }
 .home-about-section{
-	padding: 10px;
+	padding: 0px;
 	width: 100%;
 	z-index: 0 !important;
 }
@@ -196,7 +198,6 @@ body{
 .modal-lg{
 	width: 1000px !important;
 }
-
 
 
 
@@ -429,23 +430,31 @@ h1{
   margin-bottom: 4rem;
   height: 75%;
   color: #fff;
+  background-color: transparent;
+  height: 85% !important;
+  visibility: visible !important;
+  z-index: 1000 !important;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   z-index: 1000 !important;
+  z-index: 1000 !important;
+  visibility: visible !important;
   bottom: 3rem;
 }
 .carousel-quote{
   font-size: 30px;
   text-align: center;
   color: #fff;
-  z-index: 2000;
+  z-index: 1000 !important;
+  visibility: visible !important;
 }
 
 /* Declare heights because of positioning of img element */
 .carousel-item {
   height: 100% !important;
   z-index: 1000 !important;
+  visibility: visible !important;
   background-color: #fff;
 }
 .carousel-item > img {
@@ -453,10 +462,14 @@ h1{
   top: 0;
   left: 0;
   width: 100%;
+  visibility: visible !important;
+  z-index: 1000 !important;
   height: 100% !important;
 }
 .carousel-control{
   position: absolute !important;
+  visibility: visible !important;
+  z-index: 1000 !important;
   bottom: 0px !important;
 }
 /* ###################### */
@@ -632,8 +645,29 @@ box-shadow: 0px 35px 77px -17px #fff;
 
 
 
+.gallery-section{
+  background-color: #fff !important;
+  width: 100%;
+  text-align: center;
+  color: #25A187;
+}
+.gallery-section-img{
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  float: none;
+}
+.gallery-section-img img{
+  width: 200px;
+  height: 200px;
+}
 
-.background:before{
+
+/*
+.background{
+  background-color: green !important;
+  margin: 0 auto;
+  float: none;
 }
 
 .content img{
@@ -736,4 +770,4 @@ box-shadow: 10px 10px 60px 10px rgba(0,0,0,0.1);
    100%{
     transform:scale(1.0);
   }
-}
+}*/
